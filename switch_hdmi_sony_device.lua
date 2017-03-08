@@ -1,4 +1,8 @@
 -- This is a example that can control the sony tv to open and switch to HDMI2 over network. Tested on Sony bravia 55x8000c(Android TV) based.
+function sleep(n)
+  os.execute("sleep " .. tonumber(n))
+end
+
 commandArray = {}
 if(devicechanged['TV']) then
   url = 'http://192.168.1.204/sony/system'
@@ -23,6 +27,7 @@ if(devicechanged['TV']) then
         print('TV turn on failed')
     end
     
+    sleep(3) 
     
     runcommand = 'curl -v -H \"Content-Type:text/xml; charset=UTF-8\" -H \'SOAPACTION: \"urn:schemas-sony-com:service:IRCC:1#X_SendIRCC\"\' -H \"' .. headername .. ':' .. headervalue .. '\" -d \"' .. xboxonesoap .. '\" ' .. urlircc .. ''
     print(runcommand)
