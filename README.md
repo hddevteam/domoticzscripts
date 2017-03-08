@@ -13,3 +13,6 @@ You may use the script on your domoticz server with the virtual switch. I've tes
 # switch_hdmi_sony_device.lua
 This is a example that can control the sony tv to open and switch to HDMI2 over network. Tested on Sony bravia 55x8000c(Android TV) based.
 
+# launch_kodi_sony_device.lua
+This script will power on the sony tv first from standby mode and launch the kodi app over the network, tested on Sony TV 55x8000c
+
