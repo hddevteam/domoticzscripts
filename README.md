@@ -19,13 +19,14 @@ This script will power on the sony tv first from standby mode and launch the kod
 # How to get the Sony TV remote controller info?
 
 Run following command. Replace the tvip with the IP address your tv used.
-
+```sh
 curl -XPOST http://tvip/sony/system -d '{"method":"getRemoteControllerInfo","params":[],"id":10,"version":"1.0"}'
-
+```
 # How to get the installed application of the Sony TV?
 Run following command. Replace the tvip with the IP address your tv used. 
+```sh
 curl -v -H "Content-Type:application/json" -H "X-Auth-PSK:0000" -d "{\"id\":11,\"method\":\"getApplicationList\",\"version\":\"1.0\",\"params\":[]}" http://tvip/sony/appControl
-
+```
 # How to set the X-Auth-PSK key of your Sony TV?
 Enable pre-shared key on your TV: [Settings] → [Network] → [Home Network Setup] → [IP Control] → [Authentication] → [Normal and Pre-Shared Key]
 
