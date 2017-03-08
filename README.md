@@ -16,3 +16,21 @@ This is a example that can control the sony tv to open and switch to HDMI2 over 
 # launch_kodi_sony_device.lua
 This script will power on the sony tv first from standby mode and launch the kodi app over the network, tested on Sony TV 55x8000c
 
+# How to get the Sony TV remote controller info?
+
+Run following command. Replace the tvip with the IP address your tv used.
+
+curl -XPOST http://tvip/sony/system -d '{"method":"getRemoteControllerInfo","params":[],"id":10,"version":"1.0"}'
+
+# How to get the installed application of the Sony TV?
+Run following command. Replace the tvip with the IP address your tv used. 
+curl -v -H "Content-Type:application/json" -H "X-Auth-PSK:0000" -d "{\"id\":11,\"method\":\"getApplicationList\",\"version\":\"1.0\",\"params\":[]}" http://tvip/sony/appControl
+
+# How to set the X-Auth-PSK key of your Sony TV?
+Enable pre-shared key on your TV: [Settings] → [Network] → [Home Network Setup] → [IP Control] → [Authentication] → [Normal and Pre-Shared Key]
+
+Set pre-shared key on your TV: [Settings] → [Network] → [Home Network Setup] → [IP Control] → [Pre-Shared Key] → [0000]
+
+
+# More discussion 
+https://www.domoticz.com/forum/viewtopic.php?t=8301
