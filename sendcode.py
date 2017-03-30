@@ -1,3 +1,4 @@
+#!/usr/bin/python
 #you may use the file to send code via the json code file exported from the rmbridge.
 #usage: sendcode.py codename
 import sys
@@ -5,6 +6,7 @@ import json
 import broadlink
 
 #modify the file name to the file exported from rmbridge the file content shoud like the following
+#if you want to run this script in the domoticz, make sure you are using the absolute path of the json file.
 jsonFile = 'code.json'
 
 #modify the ip address and the mac address with your device.
