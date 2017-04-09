@@ -13,6 +13,8 @@ Usage:
 ```sh
 sendcode.py codename
 ```
+# callpython_device.lua
+if you can not trigger the sendcode.py command on you raspberry pi via domoticz switch, you may try to use this lua script.
 # sony_device_lua.lua
 You may use the script on your domoticz server with the virtual switch. I've tested with my Sony TV (Android TV based). The script will help you turn on the tv from the standby mode or turn it off to standby mode via network.
 
